@@ -1,0 +1,462 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.12.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>STP_LAB02: Класс STP_LAB02.Point</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">STP_LAB02<span id="projectnumber">&#160;1.00</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.12.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск',true);
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){initNavTree('class_s_t_p___l_a_b02_1_1_point.html',''); initResizable(true); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Открытые члены</a> &#124;
+<a href="#pro-attribs">Защищенные данные</a> &#124;
+<a href="#properties">Свойства</a> &#124;
+<a href="class_s_t_p___l_a_b02_1_1_point-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle"><div class="title">Класс STP_LAB02.Point</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Класс точки, заданной в полярных координатах.  
+ <a href="#details">Подробнее...</a></p>
+<div class="dynheader">
+Граф наследования:STP_LAB02.Point:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_s_t_p___l_a_b02_1_1_point__inherit__graph.png" border="0" usemap="#a_s_t_p___l_a_b02_8_point_inherit__map" alt="Inheritance graph"/></div>
+<map name="a_s_t_p___l_a_b02_8_point_inherit__map" id="a_s_t_p___l_a_b02_8_point_inherit__map">
+<area shape="rect" title="Класс точки, заданной в полярных координатах." alt="" coords="29,5,157,32"/>
+<area shape="rect" href="class_s_t_p___l_a_b02_1_1_cylinder_point.html" title="Класс точки, заданной в полярных координатах" alt="" coords="5,80,181,107"/>
+<area shape="poly" title=" " alt="" coords="96,48,96,80,90,80,90,48"/>
+</map>
+<center><span class="legend">[<a target="top" href="graph_legend.html">см. легенду</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:a5fc175e7d5ac5feba8bb7a7d01d4a206" id="r_a5fc175e7d5ac5feba8bb7a7d01d4a206"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5fc175e7d5ac5feba8bb7a7d01d4a206">Point</a> ()</td></tr>
+<tr class="memdesc:a5fc175e7d5ac5feba8bb7a7d01d4a206"><td class="mdescLeft">&#160;</td><td class="mdescRight">Конструктор класса по умолчанию, задающий длину радиус-вектора и угла.  <br /></td></tr>
+<tr class="separator:a5fc175e7d5ac5feba8bb7a7d01d4a206"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a33dca6691f6cc8a3902563bf5c8892b8" id="r_a33dca6691f6cc8a3902563bf5c8892b8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a33dca6691f6cc8a3902563bf5c8892b8">Point</a> (double R, double FI)</td></tr>
+<tr class="memdesc:a33dca6691f6cc8a3902563bf5c8892b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Конструктор класса, задающий длину радиус-вектора и угла.  <br /></td></tr>
+<tr class="separator:a33dca6691f6cc8a3902563bf5c8892b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af6b18ea2a96c8b87827c572b3250d295" id="r_af6b18ea2a96c8b87827c572b3250d295"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af6b18ea2a96c8b87827c572b3250d295">Init</a> (double R, double FI)</td></tr>
+<tr class="memdesc:af6b18ea2a96c8b87827c572b3250d295"><td class="mdescLeft">&#160;</td><td class="mdescRight">Процедура, присваивающая длину радиус-вектора и угла.  <br /></td></tr>
+<tr class="separator:af6b18ea2a96c8b87827c572b3250d295"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2ebfb50d6d8bce39da3e0790f1b1ab5a" id="r_a2ebfb50d6d8bce39da3e0790f1b1ab5a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2ebfb50d6d8bce39da3e0790f1b1ab5a">Read</a> ()</td></tr>
+<tr class="memdesc:a2ebfb50d6d8bce39da3e0790f1b1ab5a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Процедура интерактивного создания точки.  <br /></td></tr>
+<tr class="separator:a2ebfb50d6d8bce39da3e0790f1b1ab5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3fa399ee6796c94eab88aeb43b437e87" id="r_a3fa399ee6796c94eab88aeb43b437e87"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3fa399ee6796c94eab88aeb43b437e87">Display</a> ()</td></tr>
+<tr class="memdesc:a3fa399ee6796c94eab88aeb43b437e87"><td class="mdescLeft">&#160;</td><td class="mdescRight">Процедура вывода параметров точки.  <br /></td></tr>
+<tr class="separator:a3fa399ee6796c94eab88aeb43b437e87"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8ae06dd52fca7e6c945e5d5ae3e8c014" id="r_a8ae06dd52fca7e6c945e5d5ae3e8c014"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_s_t_p___l_a_b02_1_1_point.html">Point</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8ae06dd52fca7e6c945e5d5ae3e8c014">add</a> (<a class="el" href="class_s_t_p___l_a_b02_1_1_point.html">Point</a> p1, <a class="el" href="class_s_t_p___l_a_b02_1_1_point.html">Point</a> p2)</td></tr>
+<tr class="memdesc:a8ae06dd52fca7e6c945e5d5ae3e8c014"><td class="mdescLeft">&#160;</td><td class="mdescRight">Функция сложения точек  <br /></td></tr>
+<tr class="separator:a8ae06dd52fca7e6c945e5d5ae3e8c014"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acd2b98df75cd904f2fb0eb106fb0a699" id="r_acd2b98df75cd904f2fb0eb106fb0a699"><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acd2b98df75cd904f2fb0eb106fb0a699">distOX</a> ()</td></tr>
+<tr class="memdesc:acd2b98df75cd904f2fb0eb106fb0a699"><td class="mdescLeft">&#160;</td><td class="mdescRight">Функция вычисления расстояния точки от оси OX. Расстояние точки от оси OX, вычисляемое по формуле  <br /></td></tr>
+<tr class="separator:acd2b98df75cd904f2fb0eb106fb0a699"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
+Защищенные данные</h2></td></tr>
+<tr class="memitem:ab79f0a4258b335280ffe0db9e87d229d" id="r_ab79f0a4258b335280ffe0db9e87d229d"><td class="memItemLeft" align="right" valign="top"><a id="ab79f0a4258b335280ffe0db9e87d229d" name="ab79f0a4258b335280ffe0db9e87d229d"></a>
+double&#160;</td><td class="memItemRight" valign="bottom"><b>r</b></td></tr>
+<tr class="memdesc:ab79f0a4258b335280ffe0db9e87d229d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Длина радиус-вектора от начала координат (0,0) до точки. <br /></td></tr>
+<tr class="separator:ab79f0a4258b335280ffe0db9e87d229d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8c2ea24dff4beb83e958d29c60432422" id="r_a8c2ea24dff4beb83e958d29c60432422"><td class="memItemLeft" align="right" valign="top"><a id="a8c2ea24dff4beb83e958d29c60432422" name="a8c2ea24dff4beb83e958d29c60432422"></a>
+double&#160;</td><td class="memItemRight" valign="bottom"><b>fi</b></td></tr>
+<tr class="memdesc:a8c2ea24dff4beb83e958d29c60432422"><td class="mdescLeft">&#160;</td><td class="mdescRight">Угол между радиус-вектором и осью OX (в радианах). <br /></td></tr>
+<tr class="separator:a8c2ea24dff4beb83e958d29c60432422"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="properties" name="properties"></a>
+Свойства</h2></td></tr>
+<tr class="memitem:a1be45bd85a39b076046080e4921f78be" id="r_a1be45bd85a39b076046080e4921f78be"><td class="memItemLeft" align="right" valign="top"><a id="a1be45bd85a39b076046080e4921f78be" name="a1be45bd85a39b076046080e4921f78be"></a>
+double&#160;</td><td class="memItemRight" valign="bottom"><b>pFI</b><code> [get]</code></td></tr>
+<tr class="memdesc:a1be45bd85a39b076046080e4921f78be"><td class="mdescLeft">&#160;</td><td class="mdescRight">Свойство, для получения значения длины радиус-вектора. <br /></td></tr>
+<tr class="separator:a1be45bd85a39b076046080e4921f78be"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af677ed40e1f92833365a1bb06ffd8975" id="r_af677ed40e1f92833365a1bb06ffd8975"><td class="memItemLeft" align="right" valign="top"><a id="af677ed40e1f92833365a1bb06ffd8975" name="af677ed40e1f92833365a1bb06ffd8975"></a>
+double&#160;</td><td class="memItemRight" valign="bottom"><b>pR</b><code> [get]</code></td></tr>
+<tr class="memdesc:af677ed40e1f92833365a1bb06ffd8975"><td class="mdescLeft">&#160;</td><td class="mdescRight">Свойство, для получения значения угла. <br /></td></tr>
+<tr class="separator:af677ed40e1f92833365a1bb06ffd8975"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock"><p>Класс точки, заданной в полярных координатах. </p>
+<p>Данный класс создан для работы с точками, заданными в полярной системе координат. Имеется возможность их сложения и измерения расстояния до оси OX.</p>
+<div class="image">
+<img src="shema_point1.jpg" alt=""/>
+</div>
+ <dl class="todo"><dt><b><a class="el" href="todo.html#_todo000002">Необходимо сделать</a></b></dt><dd>Реализовать метод измерения расстояния между точками.</dd></dl>
+</div><h2 class="groupheader">Конструктор(ы)</h2>
+<a id="a5fc175e7d5ac5feba8bb7a7d01d4a206" name="a5fc175e7d5ac5feba8bb7a7d01d4a206"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5fc175e7d5ac5feba8bb7a7d01d4a206">&#9670;&#160;</a></span>Point() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">STP_LAB02.Point.Point </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Конструктор класса по умолчанию, задающий длину радиус-вектора и угла. </p>
+<dl class="section return"><dt>Возвращает</dt><dd>Возвращает точку, с координатами (0,0) </dd></dl>
+<div class="dynheader">
+Граф вызова функции:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_s_t_p___l_a_b02_1_1_point_a5fc175e7d5ac5feba8bb7a7d01d4a206_icgraph.png" border="0" usemap="#aclass_s_t_p___l_a_b02_1_1_point_a5fc175e7d5ac5feba8bb7a7d01d4a206_icgraph" alt=""/></div>
+<map name="aclass_s_t_p___l_a_b02_1_1_point_a5fc175e7d5ac5feba8bb7a7d01d4a206_icgraph" id="aclass_s_t_p___l_a_b02_1_1_point_a5fc175e7d5ac5feba8bb7a7d01d4a206_icgraph">
+<area shape="rect" title="Конструктор класса по умолчанию, задающий длину радиус&#45;вектора и угла." alt="" coords="206,5,367,32"/>
+<area shape="rect" href="class_s_t_p___l_a_b02_1_1_point.html#a8ae06dd52fca7e6c945e5d5ae3e8c014" title="Функция сложения точек" alt="" coords="5,5,158,32"/>
+<area shape="poly" title=" " alt="" coords="190,21,158,21,158,16,190,16"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a33dca6691f6cc8a3902563bf5c8892b8" name="a33dca6691f6cc8a3902563bf5c8892b8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a33dca6691f6cc8a3902563bf5c8892b8">&#9670;&#160;</a></span>Point() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">STP_LAB02.Point.Point </td>
+          <td>(</td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>R</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>FI</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Конструктор класса, задающий длину радиус-вектора и угла. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">R</td><td>Длина радиус-вектора. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">FI</td><td>Угол между радиус-вектором и осью OX (в радианах). </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">Методы</h2>
+<a id="a8ae06dd52fca7e6c945e5d5ae3e8c014" name="a8ae06dd52fca7e6c945e5d5ae3e8c014"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8ae06dd52fca7e6c945e5d5ae3e8c014">&#9670;&#160;</a></span>add()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_s_t_p___l_a_b02_1_1_point.html">Point</a> STP_LAB02.Point.add </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_s_t_p___l_a_b02_1_1_point.html">Point</a></td>          <td class="paramname"><span class="paramname"><em>p1</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_s_t_p___l_a_b02_1_1_point.html">Point</a></td>          <td class="paramname"><span class="paramname"><em>p2</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Функция сложения точек </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">p1</td><td>Первая точка. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">p2</td><td>Вторая точка. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Точка в полярной системе координат, длина радиус-вектора которого равна сумме длин радиус-векторов двух точек, угол которого равен сумме углов двух точек. </dd></dl>
+<div class="dynheader">
+Граф вызовов:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_s_t_p___l_a_b02_1_1_point_a8ae06dd52fca7e6c945e5d5ae3e8c014_cgraph.png" border="0" usemap="#aclass_s_t_p___l_a_b02_1_1_point_a8ae06dd52fca7e6c945e5d5ae3e8c014_cgraph" alt=""/></div>
+<map name="aclass_s_t_p___l_a_b02_1_1_point_a8ae06dd52fca7e6c945e5d5ae3e8c014_cgraph" id="aclass_s_t_p___l_a_b02_1_1_point_a8ae06dd52fca7e6c945e5d5ae3e8c014_cgraph">
+<area shape="rect" title="Функция сложения точек" alt="" coords="5,31,158,57"/>
+<area shape="rect" href="class_s_t_p___l_a_b02_1_1_point.html#af6b18ea2a96c8b87827c572b3250d295" title="Процедура, присваивающая длину радиус&#45;вектора и угла." alt="" coords="212,5,361,32"/>
+<area shape="poly" title=" " alt="" coords="158,32,195,27,196,32,158,37"/>
+<area shape="rect" href="class_s_t_p___l_a_b02_1_1_point.html#a5fc175e7d5ac5feba8bb7a7d01d4a206" title="Конструктор класса по умолчанию, задающий длину радиус&#45;вектора и угла." alt="" coords="206,56,367,83"/>
+<area shape="poly" title=" " alt="" coords="158,51,190,55,190,60,158,56"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a3fa399ee6796c94eab88aeb43b437e87" name="a3fa399ee6796c94eab88aeb43b437e87"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3fa399ee6796c94eab88aeb43b437e87">&#9670;&#160;</a></span>Display()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void STP_LAB02.Point.Display </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Процедура вывода параметров точки. </p>
+<p>Данная процедура используется в программе класса <a class="el" href="class_s_t_p___l_a_b02_1_1_program.html" title="Главный класс, имеющий функцию Main.">Program</a> для вывода значений точек пользователю на экран. </p>
+
+<p>Переопределяется в <a class="el" href="class_s_t_p___l_a_b02_1_1_cylinder_point.html#a619f2bd4acc2f19d29489513d71e9432">STP_LAB02.CylinderPoint</a>.</p>
+
+</div>
+</div>
+<a id="acd2b98df75cd904f2fb0eb106fb0a699" name="acd2b98df75cd904f2fb0eb106fb0a699"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acd2b98df75cd904f2fb0eb106fb0a699">&#9670;&#160;</a></span>distOX()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual double STP_LAB02.Point.distOX </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Функция вычисления расстояния точки от оси OX. Расстояние точки от оси OX, вычисляемое по формуле </p>
+<p class="formulaDsp">
+\[y=\left|r*\sin(\phi)  \right|\]
+</p>
+ <dl class="section return"><dt>Возвращает</dt><dd>Растояние точки от оси OX. </dd></dl>
+
+<p>Переопределяется в <a class="el" href="class_s_t_p___l_a_b02_1_1_cylinder_point.html#acc6abc1b1deeabdf9a05d78b8e87bad9">STP_LAB02.CylinderPoint</a>.</p>
+
+</div>
+</div>
+<a id="af6b18ea2a96c8b87827c572b3250d295" name="af6b18ea2a96c8b87827c572b3250d295"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af6b18ea2a96c8b87827c572b3250d295">&#9670;&#160;</a></span>Init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void STP_LAB02.Point.Init </td>
+          <td>(</td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>R</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>FI</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Процедура, присваивающая длину радиус-вектора и угла. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">R</td><td>Длина радиус-вектора. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">FI</td><td>Угол между радиус-вектором и осью OX (в радианах). </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+Граф вызова функции:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_s_t_p___l_a_b02_1_1_point_af6b18ea2a96c8b87827c572b3250d295_icgraph.png" border="0" usemap="#aclass_s_t_p___l_a_b02_1_1_point_af6b18ea2a96c8b87827c572b3250d295_icgraph" alt=""/></div>
+<map name="aclass_s_t_p___l_a_b02_1_1_point_af6b18ea2a96c8b87827c572b3250d295_icgraph" id="aclass_s_t_p___l_a_b02_1_1_point_af6b18ea2a96c8b87827c572b3250d295_icgraph">
+<area shape="rect" title="Процедура, присваивающая длину радиус&#45;вектора и угла." alt="" coords="206,5,355,32"/>
+<area shape="rect" href="class_s_t_p___l_a_b02_1_1_point.html#a8ae06dd52fca7e6c945e5d5ae3e8c014" title="Функция сложения точек" alt="" coords="5,5,158,32"/>
+<area shape="poly" title=" " alt="" coords="190,21,158,21,158,16,190,16"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a2ebfb50d6d8bce39da3e0790f1b1ab5a" name="a2ebfb50d6d8bce39da3e0790f1b1ab5a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2ebfb50d6d8bce39da3e0790f1b1ab5a">&#9670;&#160;</a></span>Read()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void STP_LAB02.Point.Read </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Процедура интерактивного создания точки. </p>
+<p>Данная процедура используется в программе класса <a class="el" href="class_s_t_p___l_a_b02_1_1_program.html" title="Главный класс, имеющий функцию Main.">Program</a> для задания пользователем точек. </p>
+
+</div>
+</div>
+<hr/>Объявления и описания членов класса находятся в файле:<ul>
+<li>C:/Users/0000/source/repos/STP_LAB02/STP_LAB02/<b>Point.cs</b></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="namespace_s_t_p___l_a_b02.html">STP_LAB02</a></li><li class="navelem"><a class="el" href="class_s_t_p___l_a_b02_1_1_point.html">Point</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
+  </ul>
+</div>
+</body>
+</html>

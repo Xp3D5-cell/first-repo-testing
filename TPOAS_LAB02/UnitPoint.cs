@@ -60,9 +60,9 @@ namespace TPOAS_LAB02
 
             // Assert
             Assert.AreEqual(expect, point1.distOX(), 0.0001);
-            Assert.AreEqual(-expect, point2.distOX(), 0.0001);
+            Assert.AreEqual(expect, point2.distOX(), 0.0001);
             Assert.AreEqual(expect, point3.distOX(), 0.0001);
-            Assert.AreEqual(-expect, point4.distOX(), 0.0001);
+            Assert.AreEqual(expect, point4.distOX(), 0.0001);
         }
 
         [TestMethod]

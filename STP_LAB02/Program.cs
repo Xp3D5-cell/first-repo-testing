@@ -2,6 +2,11 @@
 
 namespace STP_LAB02
 {
+    /*!
+   @brief Главный класс, имеющий функцию Main.
+
+
+*/
     class Program
     {
         static void Main(string[] args)

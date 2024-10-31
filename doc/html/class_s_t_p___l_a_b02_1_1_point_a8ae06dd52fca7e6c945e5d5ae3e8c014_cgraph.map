@@ -1,0 +1,7 @@
+<map id="STP_LAB02.Point.add" name="STP_LAB02.Point.add">
+<area shape="rect" id="Node000001" title="Функция сложения точек" alt="" coords="5,31,158,57"/>
+<area shape="rect" id="Node000002" href="$class_s_t_p___l_a_b02_1_1_point.html#af6b18ea2a96c8b87827c572b3250d295" title="Процедура, присваивающая длину радиус&#45;вектора и угла." alt="" coords="212,5,361,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="158,32,195,27,196,32,158,37"/>
+<area shape="rect" id="Node000003" href="$class_s_t_p___l_a_b02_1_1_point.html#a5fc175e7d5ac5feba8bb7a7d01d4a206" title="Конструктор класса по умолчанию, задающий длину радиус&#45;вектора и угла." alt="" coords="206,56,367,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="158,51,190,55,190,60,158,56"/>
+</map>
