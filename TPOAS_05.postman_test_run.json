@@ -1,0 +1,273 @@
+{
+	"id": "ef994833-96e8-49c1-b560-94196d1524a9",
+	"name": "TPOAS_05",
+	"timestamp": "2024-11-06T07:48:34.634Z",
+	"collection_id": "39475584-3c96715a-edd2-4963-a93b-3e961e0bc73d",
+	"folder_id": 0,
+	"environment_id": "39475584-067187c9-11d5-493c-89ae-5311bc8aa41a",
+	"totalPass": 21,
+	"delay": 0,
+	"persist": true,
+	"status": "finished",
+	"startedAt": "2024-11-06T07:48:31.568Z",
+	"totalFail": 0,
+	"results": [
+		{
+			"id": "f250f1fe-3ce0-40dd-801c-ff07ecaadf39",
+			"name": "getMe",
+			"url": "https://api.telegram.org/bot{{TOKEN}}/getMe",
+			"time": 92,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Request is ok": true,
+				"ID is bot": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Request is ok": {
+					"pass": 1,
+					"fail": 0
+				},
+				"ID is bot": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				92
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Request is ok": true,
+					"ID is bot": true
+				}
+			]
+		},
+		{
+			"id": "bccf6d53-70b5-425f-adfb-3538a41ae296",
+			"name": "getUodates",
+			"url": "https://api.telegram.org/bot{{TOKEN}}/getUpdates?limit=5&offset=570831383",
+			"time": 184,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Request is ok": true,
+				"First update ID is 570831383": true,
+				"First update ID is audio": true,
+				"Last update ID is 570831383": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Request is ok": {
+					"pass": 1,
+					"fail": 0
+				},
+				"First update ID is 570831383": {
+					"pass": 1,
+					"fail": 0
+				},
+				"First update ID is audio": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Last update ID is 570831383": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				184
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Request is ok": true,
+					"First update ID is 570831383": true,
+					"First update ID is audio": true,
+					"Last update ID is 570831383": true
+				}
+			]
+		},
+		{
+			"id": "0aea0aa9-7792-497c-8b92-320893a8b5d3",
+			"name": "sendMessage",
+			"url": "https://api.telegram.org/bot{{TOKEN}}/sendMessage?chat_id=5736878846&text=__*Postman test*__&parse_mode=MarkdownV2",
+			"time": 208,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Request is ok": true,
+				"Message have text": true,
+				"Text is formated bold": true,
+				"Text is formated underlined": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Request is ok": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Message have text": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Text is formated bold": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Text is formated underlined": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				208
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Request is ok": true,
+					"Message have text": true,
+					"Text is formated bold": true,
+					"Text is formated underlined": true
+				}
+			]
+		},
+		{
+			"id": "c6656731-4021-400b-b712-eb2e27fa168f",
+			"name": "sendPhoto",
+			"url": "https://api.telegram.org/bot{{TOKEN}}/sendPhoto?chat_id=5736878846&photo=https://png.pngtree.com/png-clipart/20230512/original/pngtree-isolated-cat-on-white-background-png-image_9158356.png&parse_mode=MarkdownV2&caption=__Test postman photo__",
+			"time": 275,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Request is ok": true,
+				"Caption have text": true,
+				"Caption is formated bold": true,
+				"Message have photo": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Request is ok": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Caption have text": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Caption is formated bold": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Message have photo": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				275
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Request is ok": true,
+					"Caption have text": true,
+					"Caption is formated bold": true,
+					"Message have photo": true
+				}
+			]
+		},
+		{
+			"id": "6fb8a067-c923-4103-88d1-2ab89a6fca11",
+			"name": "editMessageText",
+			"url": "https://api.telegram.org/bot{{TOKEN}}/editMessageText?chat_id=5736878846&message_id=3003&text=Edited 1730879315",
+			"time": 118,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Request is ok": true,
+				"Message have property edit_date": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Request is ok": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Message have property edit_date": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				118
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Request is ok": true,
+					"Message have property edit_date": true
+				}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 877,
+	"collection": {
+		"requests": [
+			{
+				"id": "f250f1fe-3ce0-40dd-801c-ff07ecaadf39",
+				"method": "GET"
+			},
+			{
+				"id": "bccf6d53-70b5-425f-adfb-3538a41ae296",
+				"method": "GET"
+			},
+			{
+				"id": "0aea0aa9-7792-497c-8b92-320893a8b5d3",
+				"method": "GET"
+			},
+			{
+				"id": "c6656731-4021-400b-b712-eb2e27fa168f",
+				"method": "GET"
+			},
+			{
+				"id": "6fb8a067-c923-4103-88d1-2ab89a6fca11",
+				"method": "GET"
+			}
+		]
+	}
+}

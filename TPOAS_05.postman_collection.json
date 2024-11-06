@@ -1,0 +1,691 @@
+{
+	"info": {
+		"_postman_id": "3c96715a-edd2-4963-a93b-3e961e0bc73d",
+		"name": "TPOAS_05",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "39475584"
+	},
+	"item": [
+		{
+			"name": "getMe",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function(){\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Request is ok\", function(){\r",
+							"    const response = pm.response.json();\r",
+							"    pm.expect(response['ok']).eq(true);\r",
+							"})\r",
+							"\r",
+							"pm.test(\"ID is bot\", function(){\r",
+							"    const response = pm.response.json();\r",
+							"    pm.expect(response['result']['id']).eq(5828056204);\r",
+							"})"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.telegram.org/bot{{TOKEN}}/getMe",
+					"protocol": "https",
+					"host": [
+						"api",
+						"telegram",
+						"org"
+					],
+					"path": [
+						"bot{{TOKEN}}",
+						"getMe"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "getMe",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.telegram.org/bot{{TOKEN}}/getMe",
+							"protocol": "https",
+							"host": [
+								"api",
+								"telegram",
+								"org"
+							],
+							"path": [
+								"bot{{TOKEN}}",
+								"getMe"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "nginx/1.18.0"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 05 Nov 2024 15:44:50 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "256"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=31536000; includeSubDomains; preload"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "GET, POST, OPTIONS"
+						},
+						{
+							"key": "Access-Control-Expose-Headers",
+							"value": "Content-Length,Content-Type,Date,Server,Connection"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"ok\": true,\n    \"result\": {\n        \"id\": 5828056204,\n        \"is_bot\": true,\n        \"first_name\": \"PiC_MeSSage\",\n        \"username\": \"PiC_MeSSage_bot\",\n        \"can_join_groups\": true,\n        \"can_read_all_group_messages\": false,\n        \"supports_inline_queries\": false,\n        \"can_connect_to_business\": false,\n        \"has_main_web_app\": false\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "getUodates",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function(){\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Request is ok\", function(){\r",
+							"    const response = pm.response.json();\r",
+							"    pm.expect(response['ok']).eq(true);\r",
+							"})\r",
+							"\r",
+							"pm.test(\"First update ID is 570831383\", function(){\r",
+							"    const response = pm.response.json();\r",
+							"    pm.expect(response['result'][0]['update_id']).eq(570831383);\r",
+							"})\r",
+							"\r",
+							"pm.test(\"First update ID is audio\", function(){\r",
+							"    const response = pm.response.json();\r",
+							"    pm.expect(response['result'][0]['message']).haveOwnProperty('audio');\r",
+							"})\r",
+							"\r",
+							"pm.test(\"Last update ID is 570831383\", function(){\r",
+							"    const response = pm.response.json();\r",
+							"    \r",
+							"    pm.expect(response['result'][4]['update_id']).eq(570831387);\r",
+							"})"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.telegram.org/bot{{TOKEN}}/getUpdates?limit=5&offset=570831383",
+					"protocol": "https",
+					"host": [
+						"api",
+						"telegram",
+						"org"
+					],
+					"path": [
+						"bot{{TOKEN}}",
+						"getUpdates"
+					],
+					"query": [
+						{
+							"key": "limit",
+							"value": "5",
+							"description": "число выдаваемых сообщений"
+						},
+						{
+							"key": "offset",
+							"value": "570831383",
+							"description": "смещение, равное или большее самому первому update_id"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "example",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.telegram.org/bot{{TOKEN}}/getUpdates",
+							"protocol": "https",
+							"host": [
+								"api",
+								"telegram",
+								"org"
+							],
+							"path": [
+								"bot{{TOKEN}}",
+								"getUpdates"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "nginx/1.18.0"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 05 Nov 2024 15:31:53 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "352"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=31536000; includeSubDomains; preload"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "GET, POST, OPTIONS"
+						},
+						{
+							"key": "Access-Control-Expose-Headers",
+							"value": "Content-Length,Content-Type,Date,Server,Connection"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"ok\": true,\n    \"result\": [\n        {\n            \"update_id\": 570831378,\n            \"message\": {\n                \"message_id\": 2990,\n                \"from\": {\n                    \"id\": 5736878846,\n                    \"is_bot\": false,\n                    \"first_name\": \"Xp3D5\",\n                    \"username\": \"Xp3D5\",\n                    \"language_code\": \"ru\"\n                },\n                \"chat\": {\n                    \"id\": 5736878846,\n                    \"first_name\": \"Xp3D5\",\n                    \"username\": \"Xp3D5\",\n                    \"type\": \"private\"\n                },\n                \"date\": 1730820670,\n                \"text\": \"/start\",\n                \"entities\": [\n                    {\n                        \"offset\": 0,\n                        \"length\": 6,\n                        \"type\": \"bot_command\"\n                    }\n                ]\n            }\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "sendMessage",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function(){\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Request is ok\", function(){\r",
+							"    const response = pm.response.json();\r",
+							"    pm.expect(response['ok']).eq(true);\r",
+							"})\r",
+							"\r",
+							"pm.test(\"Message have text\", function(){\r",
+							"    const response = pm.response.json();\r",
+							"    pm.expect(response['result']['text']).eq(\"Postman test\");\r",
+							"})\r",
+							"\r",
+							"pm.test(\"Text is formated bold\", function(){\r",
+							"    const response = pm.response.json();\r",
+							"    pm.expect(response['result']['entities'][0]['type']).eq(\"bold\");\r",
+							"})\r",
+							"\r",
+							"pm.test(\"Text is formated underlined\", function(){\r",
+							"    const response = pm.response.json();\r",
+							"    pm.expect(response['result']['entities'][1]['type']).eq(\"underline\");\r",
+							"})"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.telegram.org/bot{{TOKEN}}/sendMessage?chat_id=5736878846&text=__*Postman test*__&parse_mode=MarkdownV2",
+					"protocol": "https",
+					"host": [
+						"api",
+						"telegram",
+						"org"
+					],
+					"path": [
+						"bot{{TOKEN}}",
+						"sendMessage"
+					],
+					"query": [
+						{
+							"key": "chat_id",
+							"value": "5736878846"
+						},
+						{
+							"key": "text",
+							"value": "__*Postman test*__"
+						},
+						{
+							"key": "parse_mode",
+							"value": "MarkdownV2"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "sendMessage",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.telegram.org/bot{{TOKEN}}/sendMessage?chat_id=5736878846&text=__*Postman test*__&parse_mode=MarkdownV2",
+							"protocol": "https",
+							"host": [
+								"api",
+								"telegram",
+								"org"
+							],
+							"path": [
+								"bot{{TOKEN}}",
+								"sendMessage"
+							],
+							"query": [
+								{
+									"key": "chat_id",
+									"value": "5736878846"
+								},
+								{
+									"key": "text",
+									"value": "__*Postman test*__"
+								},
+								{
+									"key": "parse_mode",
+									"value": "MarkdownV2"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "nginx/1.18.0"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 06 Nov 2024 07:15:44 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "353"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=31536000; includeSubDomains; preload"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "GET, POST, OPTIONS"
+						},
+						{
+							"key": "Access-Control-Expose-Headers",
+							"value": "Content-Length,Content-Type,Date,Server,Connection"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"ok\": true,\n    \"result\": {\n        \"message_id\": 3003,\n        \"from\": {\n            \"id\": 5828056204,\n            \"is_bot\": true,\n            \"first_name\": \"PiC_MeSSage\",\n            \"username\": \"PiC_MeSSage_bot\"\n        },\n        \"chat\": {\n            \"id\": 5736878846,\n            \"first_name\": \"Xp3D5\",\n            \"username\": \"Xp3D5\",\n            \"type\": \"private\"\n        },\n        \"date\": 1730877344,\n        \"text\": \"Postman test\",\n        \"entities\": [\n            {\n                \"offset\": 0,\n                \"length\": 12,\n                \"type\": \"bold\"\n            },\n            {\n                \"offset\": 0,\n                \"length\": 12,\n                \"type\": \"underline\"\n            }\n        ]\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "sendPhoto",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function(){\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Request is ok\", function(){\r",
+							"    const response = pm.response.json();\r",
+							"    pm.expect(response['ok']).eq(true);\r",
+							"})\r",
+							"\r",
+							"pm.test(\"Caption have text\", function(){\r",
+							"    const response = pm.response.json();\r",
+							"    pm.expect(response['result']['caption']).eq(\"Test postman photo\");\r",
+							"})\r",
+							"\r",
+							"pm.test(\"Caption is formated bold\", function(){\r",
+							"    const response = pm.response.json();\r",
+							"    pm.expect(response['result']['caption_entities'][0]['type']).eq(\"underline\");\r",
+							"})\r",
+							"\r",
+							"pm.test(\"Message have photo\", function(){\r",
+							"    const response = pm.response.json();\r",
+							"    pm.expect(response['result']).haveOwnProperty(\"photo\");\r",
+							"})"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.telegram.org/bot{{TOKEN}}/sendPhoto?chat_id=5736878846&photo=https://png.pngtree.com/png-clipart/20230512/original/pngtree-isolated-cat-on-white-background-png-image_9158356.png&parse_mode=MarkdownV2&caption=__Test postman photo__",
+					"protocol": "https",
+					"host": [
+						"api",
+						"telegram",
+						"org"
+					],
+					"path": [
+						"bot{{TOKEN}}",
+						"sendPhoto"
+					],
+					"query": [
+						{
+							"key": "chat_id",
+							"value": "5736878846"
+						},
+						{
+							"key": "photo",
+							"value": "https://png.pngtree.com/png-clipart/20230512/original/pngtree-isolated-cat-on-white-background-png-image_9158356.png"
+						},
+						{
+							"key": "parse_mode",
+							"value": "MarkdownV2"
+						},
+						{
+							"key": "caption",
+							"value": "__Test postman photo__"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "sendPhoto",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.telegram.org/bot{{TOKEN}}/sendPhoto?chat_id=5736878846&photo=https://png.pngtree.com/png-clipart/20230512/original/pngtree-isolated-cat-on-white-background-png-image_9158356.png&parse_mode=MarkdownV2&caption=__Test postman photo__",
+							"protocol": "https",
+							"host": [
+								"api",
+								"telegram",
+								"org"
+							],
+							"path": [
+								"bot{{TOKEN}}",
+								"sendPhoto"
+							],
+							"query": [
+								{
+									"key": "chat_id",
+									"value": "5736878846"
+								},
+								{
+									"key": "photo",
+									"value": "https://png.pngtree.com/png-clipart/20230512/original/pngtree-isolated-cat-on-white-background-png-image_9158356.png"
+								},
+								{
+									"key": "parse_mode",
+									"value": "MarkdownV2"
+								},
+								{
+									"key": "caption",
+									"value": "__Test postman photo__"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "nginx/1.18.0"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 06 Nov 2024 07:44:17 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "1049"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=31536000; includeSubDomains; preload"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "GET, POST, OPTIONS"
+						},
+						{
+							"key": "Access-Control-Expose-Headers",
+							"value": "Content-Length,Content-Type,Date,Server,Connection"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"ok\": true,\n    \"result\": {\n        \"message_id\": 3007,\n        \"from\": {\n            \"id\": 5828056204,\n            \"is_bot\": true,\n            \"first_name\": \"PiC_MeSSage\",\n            \"username\": \"PiC_MeSSage_bot\"\n        },\n        \"chat\": {\n            \"id\": 5736878846,\n            \"first_name\": \"Xp3D5\",\n            \"username\": \"Xp3D5\",\n            \"type\": \"private\"\n        },\n        \"date\": 1730879057,\n        \"photo\": [\n            {\n                \"file_id\": \"AgACAgQAAxkDAAILvGcrGLU9sbcbbiBRk6Ikp6tT_MT5AAISsjEb7GzEUyXrvJ_Zws0WAQADAgADcwADNgQ\",\n                \"file_unique_id\": \"AQADErIxG-xsxFN4\",\n                \"file_size\": 1272,\n                \"width\": 90,\n                \"height\": 90\n            },\n            {\n                \"file_id\": \"AgACAgQAAxkDAAILvGcrGLU9sbcbbiBRk6Ikp6tT_MT5AAISsjEb7GzEUyXrvJ_Zws0WAQADAgADbQADNgQ\",\n                \"file_unique_id\": \"AQADErIxG-xsxFNy\",\n                \"file_size\": 17239,\n                \"width\": 320,\n                \"height\": 320\n            },\n            {\n                \"file_id\": \"AgACAgQAAxkDAAILvGcrGLU9sbcbbiBRk6Ikp6tT_MT5AAISsjEb7GzEUyXrvJ_Zws0WAQADAgADeAADNgQ\",\n                \"file_unique_id\": \"AQADErIxG-xsxFN9\",\n                \"file_size\": 91421,\n                \"width\": 800,\n                \"height\": 800\n            },\n            {\n                \"file_id\": \"AgACAgQAAxkDAAILvGcrGLU9sbcbbiBRk6Ikp6tT_MT5AAISsjEb7GzEUyXrvJ_Zws0WAQADAgADeQADNgQ\",\n                \"file_unique_id\": \"AQADErIxG-xsxFN-\",\n                \"file_size\": 161159,\n                \"width\": 1200,\n                \"height\": 1200\n            }\n        ],\n        \"caption\": \"Test postman photo\",\n        \"caption_entities\": [\n            {\n                \"offset\": 0,\n                \"length\": 18,\n                \"type\": \"underline\"\n            }\n        ]\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "editMessageText",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function(){\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Request is ok\", function(){\r",
+							"    const response = pm.response.json();\r",
+							"    pm.expect(response['ok']).eq(true);\r",
+							"})\r",
+							"\r",
+							"\r",
+							"pm.test(\"Message have property edit_date\", function(){\r",
+							"    const response = pm.response.json();\r",
+							"    pm.expect(response['result']).haveOwnProperty('edit_date');\r",
+							"})"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.telegram.org/bot{{TOKEN}}/editMessageText?chat_id=5736878846&message_id=3003&text=Edited {{$timestamp}}",
+					"protocol": "https",
+					"host": [
+						"api",
+						"telegram",
+						"org"
+					],
+					"path": [
+						"bot{{TOKEN}}",
+						"editMessageText"
+					],
+					"query": [
+						{
+							"key": "chat_id",
+							"value": "5736878846"
+						},
+						{
+							"key": "message_id",
+							"value": "3003"
+						},
+						{
+							"key": "text",
+							"value": "Edited {{$timestamp}}"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "editMessageText",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.telegram.org/bot{{TOKEN}}/editMessageText?chat_id=5736878846&message_id=3003&text=Edited {{$timestamp}}",
+							"protocol": "https",
+							"host": [
+								"api",
+								"telegram",
+								"org"
+							],
+							"path": [
+								"bot{{TOKEN}}",
+								"editMessageText"
+							],
+							"query": [
+								{
+									"key": "chat_id",
+									"value": "5736878846"
+								},
+								{
+									"key": "message_id",
+									"value": "3003"
+								},
+								{
+									"key": "text",
+									"value": "Edited {{$timestamp}}"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "nginx/1.18.0"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 06 Nov 2024 07:46:15 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "285"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=31536000; includeSubDomains; preload"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "GET, POST, OPTIONS"
+						},
+						{
+							"key": "Access-Control-Expose-Headers",
+							"value": "Content-Length,Content-Type,Date,Server,Connection"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"ok\": true,\n    \"result\": {\n        \"message_id\": 3003,\n        \"from\": {\n            \"id\": 5828056204,\n            \"is_bot\": true,\n            \"first_name\": \"PiC_MeSSage\",\n            \"username\": \"PiC_MeSSage_bot\"\n        },\n        \"chat\": {\n            \"id\": 5736878846,\n            \"first_name\": \"Xp3D5\",\n            \"username\": \"Xp3D5\",\n            \"type\": \"private\"\n        },\n        \"date\": 1730877344,\n        \"edit_date\": 1730879175,\n        \"text\": \"Edited 1730879174\"\n    }\n}"
+				}
+			]
+		}
+	]
+}
